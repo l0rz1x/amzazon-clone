@@ -1,6 +1,6 @@
 
 export function calmoney(priceCents){
-   const result = (priceCents / 100).toFixed(2);
+   const result = (Math.round(priceCents) / 100).toFixed(2);
    return result;
 }
 
