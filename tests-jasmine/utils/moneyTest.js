@@ -1,4 +1,4 @@
-import { calmoney } from '../scripts/utils/money.js';
+import { calmoney } from '../../scripts/utils/money.js';
 
 describe('case suit: formatCurrency', () => {
     it('convert cents into dollar', () => {
