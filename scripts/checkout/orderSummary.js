@@ -40,9 +40,9 @@ cart.forEach((cartItem) => {
                 </div>
                 <div class="product-quantity">
                   <span>
-                    Quantity: <span class="quantity-label">${cartItem.quantity}</span>
+                    Quantity: <span class="quantity-label js-quantity-label">${cartItem.quantity}</span>
                   </span>
-                  <span class="update-quantity-link link-primary">
+                  <span class="update-quantity-link link-primary js-update-link">
                     Update
                   </span>
                   <span class="delete-quantity-link link-primary js-delete-link" data-product-id="${matchingItem.id}">
@@ -98,6 +98,7 @@ function deliveryOptionsHTML(matchingItem, cartItem){
 }
 
 document.querySelector('.js-order-summary').innerHTML = cartSummaryHTML;
+
 document.querySelectorAll('.js-delete-link')
   .forEach((link) => {
     link.addEventListener('click', () => {
@@ -107,6 +108,7 @@ document.querySelectorAll('.js-delete-link')
      renderPaymentSummary();
     })
   });
+
   
   document.querySelectorAll('.js-delivery-option').forEach((element) => {
     element.addEventListener('click', () => {

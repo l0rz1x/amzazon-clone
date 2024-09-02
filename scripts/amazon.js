@@ -3,6 +3,7 @@ import { products } from '../data/products.js';
 import { calmoney } from './utils/money.js';
 let productsHTML = '';
 products.forEach((product) => {
+    
     productsHTML += `
         <div class="product-container">
             <div class="product-image-container">
@@ -27,7 +28,7 @@ products.forEach((product) => {
             </div>
 
             <div class="product-quantity-container">
-                <select>
+                <select class="js-quantity-selector-${product.id}">
                 <option selected value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -67,11 +68,12 @@ function updateCartQuantity(){
 }
 
 document.querySelector('.js-products-grid').innerHTML = productsHTML;
+
 document.querySelectorAll('.js-add-to-cart').forEach((button) => {
     button.addEventListener('click', () => {
         const productId = button.dataset.productId;
-        addToCart(productId);
-        updateCartQuantity();
+       addToCart(productId);
+       updateCartQuantity();
         
     })
     
