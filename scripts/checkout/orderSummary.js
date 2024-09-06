@@ -36,7 +36,7 @@ cart.forEach((cartItem) => {
                   ${matchingItem.name}
                 </div>
                 <div class="product-price">
-                  $${calmoney(matchingItem.priceCents)}
+                  ${matchingItem.getPrice()}
                 </div>
                 <div class="product-quantity">
                   <span>
