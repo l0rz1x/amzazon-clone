@@ -22,11 +22,7 @@ const totalBeforeTaxCents = productPriceCents + shippingPriceCents;
 const taxCents = totalBeforeTaxCents * 0.1;
 const orderTotalCents = totalBeforeTaxCents + taxCents;
 
-let checkoutQuantityHTML = `
- Checkout (<a class="return-to-home-link"
-            href="amazon.html">${totalQuantity} items</a>)
-`;
-document.querySelector('.js-checkout-item-quantity').innerHTML = checkoutQuantityHTML;
+
 
 let paymentSummaryHTML = `
         <div class="payment-summary-title">
