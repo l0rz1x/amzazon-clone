@@ -3,7 +3,7 @@ import { products } from '../data/products.js';
 import { calmoney } from './utils/money.js';
 let productsHTML = '';
 products.forEach((product) => {
-    
+    //dsfs
     productsHTML += `
         <div class="product-container">
             <div class="product-image-container">
